@@ -1,0 +1,498 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3EC0C12B9575470060BD21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3EC0C02B9575470060BD21 /* AppDelegate.swift */; };
+		1D3EC0C32B9575470060BD21 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3EC0C22B9575470060BD21 /* SceneDelegate.swift */; };
+		1D3EC0C52B9575470060BD21 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3EC0C42B9575470060BD21 /* ScanViewController.swift */; };
+		1D3EC0C82B9575470060BD21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D3EC0C62B9575470060BD21 /* Main.storyboard */; };
+		1D3EC0CA2B9575480060BD21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D3EC0C92B9575480060BD21 /* Assets.xcassets */; };
+		1D3EC0CD2B9575480060BD21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D3EC0CB2B9575480060BD21 /* LaunchScreen.storyboard */; };
+		1D3EC0D72B9575D40060BD21 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 1D3EC0D62B9575D40060BD21 /* Realm */; };
+		1D3EC0D92B9575D40060BD21 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1D3EC0D82B9575D40060BD21 /* RealmSwift */; };
+		1D3EC0DC2B9575E00060BD21 /* TRETJapanNFCReader in Frameworks */ = {isa = PBXBuildFile; productRef = 1D3EC0DB2B9575E00060BD21 /* TRETJapanNFCReader */; };
+		1D3EC0DE2B9575E00060BD21 /* TRETJapanNFCReader/Core in Frameworks */ = {isa = PBXBuildFile; productRef = 1D3EC0DD2B9575E00060BD21 /* TRETJapanNFCReader/Core */; };
+		1D3EC0E02B9575E00060BD21 /* TRETJapanNFCReader/FeliCa in Frameworks */ = {isa = PBXBuildFile; productRef = 1D3EC0DF2B9575E00060BD21 /* TRETJapanNFCReader/FeliCa */; };
+		1D3EC0E22B9575E00060BD21 /* TRETJapanNFCReader/FeliCa/FCFCampus in Frameworks */ = {isa = PBXBuildFile; productRef = 1D3EC0E12B9575E00060BD21 /* TRETJapanNFCReader/FeliCa/FCFCampus */; };
+		1D3EC0E42B9575E00060BD21 /* TRETJapanNFCReader/FeliCa/NTasu in Frameworks */ = {isa = PBXBuildFile; productRef = 1D3EC0E32B9575E00060BD21 /* TRETJapanNFCReader/FeliCa/NTasu */; };
+		1D3EC0E62B95ADAB0060BD21 /* ScanResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3EC0E52B95ADAB0060BD21 /* ScanResultViewController.swift */; };
+		1D3EC0E82B95B16D0060BD21 /* CardInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3EC0E72B95B16D0060BD21 /* CardInfo.swift */; };
+		1D3EC0EA2B95B2480060BD21 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3EC0E92B95B2480060BD21 /* Transaction.swift */; };
+		1D3EC0EC2B95B28A0060BD21 /* Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3EC0EB2B95B28A0060BD21 /* Award.swift */; };
+		1D3EC0EF2B95ED8D0060BD21 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3EC0ED2B95ED8D0060BD21 /* TransactionTableViewCell.swift */; };
+		1D3EC0F02B95ED8D0060BD21 /* TransactionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D3EC0EE2B95ED8D0060BD21 /* TransactionTableViewCell.xib */; };
+		1DDE5EF02B975228001DFB64 /* CardListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDE5EEF2B975228001DFB64 /* CardListViewController.swift */; };
+		1DDE5EF32B97565B001DFB64 /* CardInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDE5EF12B97565B001DFB64 /* CardInfoTableViewCell.swift */; };
+		1DDE5EF42B97565B001DFB64 /* CardInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDE5EF22B97565B001DFB64 /* CardInfoTableViewCell.xib */; };
+		1DE3D9D02B9DE52400F38F34 /* BattleReadyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE3D9CF2B9DE52400F38F34 /* BattleReadyViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D3EC0BD2B9575470060BD21 /* ICButler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ICButler.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D3EC0C02B9575470060BD21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1D3EC0C22B9575470060BD21 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		1D3EC0C42B9575470060BD21 /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
+		1D3EC0C72B9575470060BD21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1D3EC0C92B9575480060BD21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1D3EC0CC2B9575480060BD21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1D3EC0CE2B9575480060BD21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D3EC0D42B9575520060BD21 /* ICButler.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ICButler.entitlements; sourceTree = "<group>"; };
+		1D3EC0E52B95ADAB0060BD21 /* ScanResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanResultViewController.swift; sourceTree = "<group>"; };
+		1D3EC0E72B95B16D0060BD21 /* CardInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfo.swift; sourceTree = "<group>"; };
+		1D3EC0E92B95B2480060BD21 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		1D3EC0EB2B95B28A0060BD21 /* Award.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Award.swift; sourceTree = "<group>"; };
+		1D3EC0ED2B95ED8D0060BD21 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
+		1D3EC0EE2B95ED8D0060BD21 /* TransactionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionTableViewCell.xib; sourceTree = "<group>"; };
+		1DDE5EEF2B975228001DFB64 /* CardListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListViewController.swift; sourceTree = "<group>"; };
+		1DDE5EF12B97565B001DFB64 /* CardInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfoTableViewCell.swift; sourceTree = "<group>"; };
+		1DDE5EF22B97565B001DFB64 /* CardInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardInfoTableViewCell.xib; sourceTree = "<group>"; };
+		1DE3D9CF2B9DE52400F38F34 /* BattleReadyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleReadyViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D3EC0BA2B9575470060BD21 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D3EC0D92B9575D40060BD21 /* RealmSwift in Frameworks */,
+				1D3EC0DC2B9575E00060BD21 /* TRETJapanNFCReader in Frameworks */,
+				1D3EC0E22B9575E00060BD21 /* TRETJapanNFCReader/FeliCa/FCFCampus in Frameworks */,
+				1D3EC0DE2B9575E00060BD21 /* TRETJapanNFCReader/Core in Frameworks */,
+				1D3EC0E02B9575E00060BD21 /* TRETJapanNFCReader/FeliCa in Frameworks */,
+				1D3EC0D72B9575D40060BD21 /* Realm in Frameworks */,
+				1D3EC0E42B9575E00060BD21 /* TRETJapanNFCReader/FeliCa/NTasu in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1D3EC0B42B9575470060BD21 = {
+			isa = PBXGroup;
+			children = (
+				1D3EC0BF2B9575470060BD21 /* ICButler */,
+				1D3EC0BE2B9575470060BD21 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1D3EC0BE2B9575470060BD21 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D3EC0BD2B9575470060BD21 /* ICButler.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1D3EC0BF2B9575470060BD21 /* ICButler */ = {
+			isa = PBXGroup;
+			children = (
+				1D3EC0D42B9575520060BD21 /* ICButler.entitlements */,
+				1D3EC0C02B9575470060BD21 /* AppDelegate.swift */,
+				1D3EC0C22B9575470060BD21 /* SceneDelegate.swift */,
+				1D3EC0C42B9575470060BD21 /* ScanViewController.swift */,
+				1D3EC0C62B9575470060BD21 /* Main.storyboard */,
+				1D3EC0C92B9575480060BD21 /* Assets.xcassets */,
+				1D3EC0CB2B9575480060BD21 /* LaunchScreen.storyboard */,
+				1D3EC0CE2B9575480060BD21 /* Info.plist */,
+				1D3EC0E52B95ADAB0060BD21 /* ScanResultViewController.swift */,
+				1D3EC0E72B95B16D0060BD21 /* CardInfo.swift */,
+				1D3EC0E92B95B2480060BD21 /* Transaction.swift */,
+				1D3EC0EB2B95B28A0060BD21 /* Award.swift */,
+				1D3EC0ED2B95ED8D0060BD21 /* TransactionTableViewCell.swift */,
+				1D3EC0EE2B95ED8D0060BD21 /* TransactionTableViewCell.xib */,
+				1DDE5EEF2B975228001DFB64 /* CardListViewController.swift */,
+				1DDE5EF12B97565B001DFB64 /* CardInfoTableViewCell.swift */,
+				1DDE5EF22B97565B001DFB64 /* CardInfoTableViewCell.xib */,
+				1DE3D9CF2B9DE52400F38F34 /* BattleReadyViewController.swift */,
+			);
+			path = ICButler;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D3EC0BC2B9575470060BD21 /* ICButler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D3EC0D12B9575480060BD21 /* Build configuration list for PBXNativeTarget "ICButler" */;
+			buildPhases = (
+				1D3EC0B92B9575470060BD21 /* Sources */,
+				1D3EC0BA2B9575470060BD21 /* Frameworks */,
+				1D3EC0BB2B9575470060BD21 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ICButler;
+			packageProductDependencies = (
+				1D3EC0D62B9575D40060BD21 /* Realm */,
+				1D3EC0D82B9575D40060BD21 /* RealmSwift */,
+				1D3EC0DB2B9575E00060BD21 /* TRETJapanNFCReader */,
+				1D3EC0DD2B9575E00060BD21 /* TRETJapanNFCReader/Core */,
+				1D3EC0DF2B9575E00060BD21 /* TRETJapanNFCReader/FeliCa */,
+				1D3EC0E12B9575E00060BD21 /* TRETJapanNFCReader/FeliCa/FCFCampus */,
+				1D3EC0E32B9575E00060BD21 /* TRETJapanNFCReader/FeliCa/NTasu */,
+			);
+			productName = ICButler;
+			productReference = 1D3EC0BD2B9575470060BD21 /* ICButler.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1D3EC0B52B9575470060BD21 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					1D3EC0BC2B9575470060BD21 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 1D3EC0B82B9575470060BD21 /* Build configuration list for PBXProject "ICButler" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1D3EC0B42B9575470060BD21;
+			packageReferences = (
+				1D3EC0D52B9575D40060BD21 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				1D3EC0DA2B9575E00060BD21 /* XCRemoteSwiftPackageReference "TRETJapanNFCReader" */,
+			);
+			productRefGroup = 1D3EC0BE2B9575470060BD21 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D3EC0BC2B9575470060BD21 /* ICButler */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D3EC0BB2B9575470060BD21 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DDE5EF42B97565B001DFB64 /* CardInfoTableViewCell.xib in Resources */,
+				1D3EC0CD2B9575480060BD21 /* LaunchScreen.storyboard in Resources */,
+				1D3EC0CA2B9575480060BD21 /* Assets.xcassets in Resources */,
+				1D3EC0F02B95ED8D0060BD21 /* TransactionTableViewCell.xib in Resources */,
+				1D3EC0C82B9575470060BD21 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D3EC0B92B9575470060BD21 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D3EC0E82B95B16D0060BD21 /* CardInfo.swift in Sources */,
+				1D3EC0EC2B95B28A0060BD21 /* Award.swift in Sources */,
+				1D3EC0EF2B95ED8D0060BD21 /* TransactionTableViewCell.swift in Sources */,
+				1D3EC0E62B95ADAB0060BD21 /* ScanResultViewController.swift in Sources */,
+				1D3EC0EA2B95B2480060BD21 /* Transaction.swift in Sources */,
+				1D3EC0C52B9575470060BD21 /* ScanViewController.swift in Sources */,
+				1DDE5EF02B975228001DFB64 /* CardListViewController.swift in Sources */,
+				1D3EC0C12B9575470060BD21 /* AppDelegate.swift in Sources */,
+				1D3EC0C32B9575470060BD21 /* SceneDelegate.swift in Sources */,
+				1DE3D9D02B9DE52400F38F34 /* BattleReadyViewController.swift in Sources */,
+				1DDE5EF32B97565B001DFB64 /* CardInfoTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1D3EC0C62B9575470060BD21 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D3EC0C72B9575470060BD21 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1D3EC0CB2B9575480060BD21 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D3EC0CC2B9575480060BD21 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1D3EC0CF2B9575480060BD21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1D3EC0D02B9575480060BD21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1D3EC0D22B9575480060BD21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ICButler/ICButler.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HHBLP8M79N;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ICButler/Info.plist;
+				INFOPLIST_KEY_NFCReaderUsageDescription = "カードをスキャンするために使用します。";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ito.ICButler;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1D3EC0D32B9575480060BD21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ICButler/ICButler.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HHBLP8M79N;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ICButler/Info.plist;
+				INFOPLIST_KEY_NFCReaderUsageDescription = "カードをスキャンするために使用します。";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ito.ICButler;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D3EC0B82B9575470060BD21 /* Build configuration list for PBXProject "ICButler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D3EC0CF2B9575480060BD21 /* Debug */,
+				1D3EC0D02B9575480060BD21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1D3EC0D12B9575480060BD21 /* Build configuration list for PBXNativeTarget "ICButler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D3EC0D22B9575480060BD21 /* Debug */,
+				1D3EC0D32B9575480060BD21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1D3EC0D52B9575D40060BD21 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		1D3EC0DA2B9575E00060BD21 /* XCRemoteSwiftPackageReference "TRETJapanNFCReader" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/treastrain/TRETJapanNFCReader";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1D3EC0D62B9575D40060BD21 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1D3EC0D52B9575D40060BD21 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		1D3EC0D82B9575D40060BD21 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1D3EC0D52B9575D40060BD21 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		1D3EC0DB2B9575E00060BD21 /* TRETJapanNFCReader */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1D3EC0DA2B9575E00060BD21 /* XCRemoteSwiftPackageReference "TRETJapanNFCReader" */;
+			productName = TRETJapanNFCReader;
+		};
+		1D3EC0DD2B9575E00060BD21 /* TRETJapanNFCReader/Core */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1D3EC0DA2B9575E00060BD21 /* XCRemoteSwiftPackageReference "TRETJapanNFCReader" */;
+			productName = TRETJapanNFCReader/Core;
+		};
+		1D3EC0DF2B9575E00060BD21 /* TRETJapanNFCReader/FeliCa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1D3EC0DA2B9575E00060BD21 /* XCRemoteSwiftPackageReference "TRETJapanNFCReader" */;
+			productName = TRETJapanNFCReader/FeliCa;
+		};
+		1D3EC0E12B9575E00060BD21 /* TRETJapanNFCReader/FeliCa/FCFCampus */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1D3EC0DA2B9575E00060BD21 /* XCRemoteSwiftPackageReference "TRETJapanNFCReader" */;
+			productName = TRETJapanNFCReader/FeliCa/FCFCampus;
+		};
+		1D3EC0E32B9575E00060BD21 /* TRETJapanNFCReader/FeliCa/NTasu */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1D3EC0DA2B9575E00060BD21 /* XCRemoteSwiftPackageReference "TRETJapanNFCReader" */;
+			productName = TRETJapanNFCReader/FeliCa/NTasu;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 1D3EC0B52B9575470060BD21 /* Project object */;
+}
