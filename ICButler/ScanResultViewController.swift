@@ -10,6 +10,7 @@ import RealmSwift
 
 class ScanResultViewController: UIViewController, UITableViewDataSource {
     
+    @IBOutlet var cardName: UILabel!
     @IBOutlet var tableView: UITableView!
     
     let realm = try! Realm()
@@ -24,6 +25,9 @@ class ScanResultViewController: UIViewController, UITableViewDataSource {
             if card.id == cardInfo!.id {
                 isExists = true
                 try! realm.write {
+                    if card.name != "Felica" {
+                        card.name = cardInfo!.name
+                    }
                     card.balance = cardInfo!.balance
                     card.transactions = cardInfo!.transactions
                 }
@@ -36,8 +40,11 @@ class ScanResultViewController: UIViewController, UITableViewDataSource {
             }
         }
         
+        cardName.text = cardInfo!.name
         tableView.dataSource = self
         tableView.register(UINib(nibName: "TransactionTableViewCell", bundle: nil), forCellReuseIdentifier: "TransactionCell")
+        
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

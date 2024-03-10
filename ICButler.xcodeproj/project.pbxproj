@@ -27,6 +27,7 @@
 		1D3EC0EF2B95ED8D0060BD21 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3EC0ED2B95ED8D0060BD21 /* TransactionTableViewCell.swift */; };
 		1D3EC0F02B95ED8D0060BD21 /* TransactionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D3EC0EE2B95ED8D0060BD21 /* TransactionTableViewCell.xib */; };
 		1DB4D0282B9DEEAB002768AC /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB4D0272B9DEEAB002768AC /* UIColor.swift */; };
+		1DB4D02E2B9E073C002768AC /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DB4D02D2B9E073C002768AC /* icon.png */; };
 		1DDE5EF02B975228001DFB64 /* CardListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDE5EEF2B975228001DFB64 /* CardListViewController.swift */; };
 		1DDE5EF32B97565B001DFB64 /* CardInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDE5EF12B97565B001DFB64 /* CardInfoTableViewCell.swift */; };
 		1DDE5EF42B97565B001DFB64 /* CardInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDE5EF22B97565B001DFB64 /* CardInfoTableViewCell.xib */; };
@@ -50,6 +51,7 @@
 		1D3EC0ED2B95ED8D0060BD21 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
 		1D3EC0EE2B95ED8D0060BD21 /* TransactionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionTableViewCell.xib; sourceTree = "<group>"; };
 		1DB4D0272B9DEEAB002768AC /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		1DB4D02D2B9E073C002768AC /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../../../../../../Users/harumaito/Downloads/icon.png; sourceTree = "<group>"; };
 		1DDE5EEF2B975228001DFB64 /* CardListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListViewController.swift; sourceTree = "<group>"; };
 		1DDE5EF12B97565B001DFB64 /* CardInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfoTableViewCell.swift; sourceTree = "<group>"; };
 		1DDE5EF22B97565B001DFB64 /* CardInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardInfoTableViewCell.xib; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				1D3EC0C42B9575470060BD21 /* ScanViewController.swift */,
 				1D3EC0C62B9575470060BD21 /* Main.storyboard */,
 				1D3EC0C92B9575480060BD21 /* Assets.xcassets */,
+				1DB4D02D2B9E073C002768AC /* icon.png */,
 				1D3EC0CB2B9575480060BD21 /* LaunchScreen.storyboard */,
 				1D3EC0CE2B9575480060BD21 /* Info.plist */,
 				1D3EC0E52B95ADAB0060BD21 /* ScanResultViewController.swift */,
@@ -189,6 +192,7 @@
 			files = (
 				1DDE5EF42B97565B001DFB64 /* CardInfoTableViewCell.xib in Resources */,
 				1D3EC0CD2B9575480060BD21 /* LaunchScreen.storyboard in Resources */,
+				1DB4D02E2B9E073C002768AC /* icon.png in Resources */,
 				1D3EC0CA2B9575480060BD21 /* Assets.xcassets in Resources */,
 				1D3EC0F02B95ED8D0060BD21 /* TransactionTableViewCell.xib in Resources */,
 				1D3EC0C82B9575470060BD21 /* Main.storyboard in Resources */,

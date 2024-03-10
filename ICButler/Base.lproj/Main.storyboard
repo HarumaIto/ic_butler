@@ -130,7 +130,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="カード名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IAb-vb-Xhk">
-                                <rect key="frame" x="16" y="311" width="83" height="27"/>
+                                <rect key="frame" x="16" y="311" width="281" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <nil key="textColor"/>
@@ -177,12 +177,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="9E5-Lz-Qi5"/>
                     <connections>
+                        <outlet property="cardName" destination="IAb-vb-Xhk" id="Q58-6j-fdB"/>
                         <outlet property="tableView" destination="iyA-V7-q7B" id="QBh-nV-NW0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8vf-ik-vsm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1820" y="706.59670164917543"/>
+            <point key="canvasLocation" x="1821.5999999999999" y="706.59670164917543"/>
         </scene>
         <!--バトル-->
         <scene sceneID="uNk-MJ-6xX">
