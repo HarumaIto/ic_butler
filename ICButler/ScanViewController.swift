@@ -8,7 +8,6 @@
 import UIKit
 import TRETJapanNFCReader_FeliCa
 import TRETJapanNFCReader_FeliCa_TransitIC
-import RealmSwift
 
 class ScanViewController: UIViewController, FeliCaReaderSessionDelegate {
     

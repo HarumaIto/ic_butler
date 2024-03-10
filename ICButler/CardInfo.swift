@@ -16,11 +16,11 @@ class CardInfo: Object {
     @Persisted var transactions: List<Transaction>
     
     func fromCardData(cardData: TransitICCardData) -> CardInfo {
-        var cardInfo = CardInfo()
+        let cardInfo = CardInfo()
         cardInfo.id = cardData.primaryIDm
-        cardInfo.name = "unknown"
+        cardInfo.name = "Felica"
         cardInfo.balance = cardData.balance!
-        
+
         print("入退場情報")
         for data in cardData.entryExitInformationsData! {
             print(data.hexString)

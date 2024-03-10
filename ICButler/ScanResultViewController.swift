@@ -18,8 +18,22 @@ class ScanResultViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        try! realm.write {
-            realm.add(cardInfo!)
+        let cards = Array(realm.objects(CardInfo.self))
+        var isExists: Bool = false
+        for card in cards {
+            if card.id == cardInfo!.id {
+                isExists = true
+                try! realm.write {
+                    card.balance = cardInfo!.balance
+                    card.transactions = cardInfo!.transactions
+                }
+            }
+        }
+        
+        if !isExists {
+            try! realm.write {
+                realm.add(cardInfo!)
+            }
         }
         
         tableView.dataSource = self
