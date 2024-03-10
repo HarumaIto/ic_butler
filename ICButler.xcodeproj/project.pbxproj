@@ -26,6 +26,7 @@
 		1D3EC0EC2B95B28A0060BD21 /* Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3EC0EB2B95B28A0060BD21 /* Award.swift */; };
 		1D3EC0EF2B95ED8D0060BD21 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3EC0ED2B95ED8D0060BD21 /* TransactionTableViewCell.swift */; };
 		1D3EC0F02B95ED8D0060BD21 /* TransactionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D3EC0EE2B95ED8D0060BD21 /* TransactionTableViewCell.xib */; };
+		1DB4D0282B9DEEAB002768AC /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB4D0272B9DEEAB002768AC /* UIColor.swift */; };
 		1DDE5EF02B975228001DFB64 /* CardListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDE5EEF2B975228001DFB64 /* CardListViewController.swift */; };
 		1DDE5EF32B97565B001DFB64 /* CardInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDE5EF12B97565B001DFB64 /* CardInfoTableViewCell.swift */; };
 		1DDE5EF42B97565B001DFB64 /* CardInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDE5EF22B97565B001DFB64 /* CardInfoTableViewCell.xib */; };
@@ -48,6 +49,7 @@
 		1D3EC0EB2B95B28A0060BD21 /* Award.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Award.swift; sourceTree = "<group>"; };
 		1D3EC0ED2B95ED8D0060BD21 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
 		1D3EC0EE2B95ED8D0060BD21 /* TransactionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionTableViewCell.xib; sourceTree = "<group>"; };
+		1DB4D0272B9DEEAB002768AC /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		1DDE5EEF2B975228001DFB64 /* CardListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListViewController.swift; sourceTree = "<group>"; };
 		1DDE5EF12B97565B001DFB64 /* CardInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfoTableViewCell.swift; sourceTree = "<group>"; };
 		1DDE5EF22B97565B001DFB64 /* CardInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardInfoTableViewCell.xib; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				1DDE5EF12B97565B001DFB64 /* CardInfoTableViewCell.swift */,
 				1DDE5EF22B97565B001DFB64 /* CardInfoTableViewCell.xib */,
 				1DE3D9CF2B9DE52400F38F34 /* BattleReadyViewController.swift */,
+				1DB4D0272B9DEEAB002768AC /* UIColor.swift */,
 			);
 			path = ICButler;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D3EC0E82B95B16D0060BD21 /* CardInfo.swift in Sources */,
+				1DB4D0282B9DEEAB002768AC /* UIColor.swift in Sources */,
 				1D3EC0EC2B95B28A0060BD21 /* Award.swift in Sources */,
 				1D3EC0EF2B95ED8D0060BD21 /* TransactionTableViewCell.swift in Sources */,
 				1D3EC0E62B95ADAB0060BD21 /* ScanResultViewController.swift in Sources */,

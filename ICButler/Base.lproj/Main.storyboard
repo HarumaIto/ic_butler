@@ -246,6 +246,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="VS">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="17"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="onStartGame" destination="Da0-IS-J9b" eventType="touchUpInside" id="bBf-Pk-LIA"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HHA-zf-xoL"/>
@@ -253,8 +256,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="バトル" image="flag.and.flag.filled.crossed" catalog="system" id="aD7-hh-di3"/>
                     <connections>
-                        <outlet property="bottomCardView" destination="mMD-uL-9Qa" id="pfA-Bn-Xzq"/>
-                        <outlet property="topCardView" destination="8Z3-po-H2V" id="14V-1Q-kMB"/>
+                        <outlet property="firstCardView" destination="8Z3-po-H2V" id="QeS-4u-Pxb"/>
+                        <outlet property="secondCardView" destination="mMD-uL-9Qa" id="fw3-52-M9n"/>
+                        <outlet property="startButton" destination="75b-gf-t5g" id="mRF-rA-icY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gCV-Bm-5JI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
