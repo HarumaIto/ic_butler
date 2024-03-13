@@ -8,10 +8,10 @@
 import UIKit
 import RealmSwift
 
-class ScanResultViewController: UIViewController, UITableViewDataSource {
+class ScanResultViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet var cardName: UILabel!
-    @IBOutlet var tableView: UITableView!
+    @IBOutlet var collectionView: UICollectionView!
     
     let realm = try! Realm()
     var cardInfo: CardInfo?
@@ -41,20 +41,34 @@ class ScanResultViewController: UIViewController, UITableViewDataSource {
         }
         
         cardName.text = cardInfo!.name
-        tableView.dataSource = self
-        tableView.register(UINib(nibName: "TransactionTableViewCell", bundle: nil), forCellReuseIdentifier: "TransactionCell")
-        
-        
+        collectionView.dataSource = self
+        collectionView.delegate = self
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return cardInfo!.transactions.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionCell", for: indexPath) as! TransactionTableViewCell
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        // Util からでディスプレイサイズ取得
+        // Width はそれを使い，高さは適切な値で返してやる
+        let returnSize = CGSize(width: Util.returnDisplaySize().width - 36, height: 84)
+
+        return returnSize
+    }
+        
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell: UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "TransactionCell", for: indexPath)
         let transaction: Transaction = cardInfo!.transactions[indexPath.row]
-        cell.setCell(transaction: transaction)
+        
+        let entry = cell.contentView.viewWithTag(2) as! UILabel
+        entry.text = transaction.entryCode
+        let exit = cell.contentView.viewWithTag(1) as! UILabel
+        exit.text = transaction.exitCode
+        let date = cell.contentView.viewWithTag(4) as! UILabel
+        date.text = transaction.date
+        let balance = cell.contentView.viewWithTag(3) as! UILabel
+        balance.text = "\(transaction.balance)円"
         
         return cell
     }
