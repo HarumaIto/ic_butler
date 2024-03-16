@@ -1,48 +1,31 @@
 //
-//  ScanResultViewController.swift
+//  BattleResultViewController.swift
 //  ICButler
 //
-//  Created by Haruma Ito on 2024/03/04.
+//  Created by Haruma Ito on 2024/03/16.
 //
 
 import UIKit
-import RealmSwift
 
-class ScanResultViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    
+class BattleResultViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout  {
+
+    @IBOutlet var cardView: UIView!
+    @IBOutlet var cardNumber: UILabel!
     @IBOutlet var cardName: UILabel!
     @IBOutlet var collectionView: UICollectionView!
-    
-    let realm = try! Realm()
+
     var cardInfo: CardInfo?
+    var firstCard: CardInfo?
+    var secondCard: CardInfo?
     
+    var primaryColor: UIColor = UIColor(hexString: "#F4C06D")
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let cards = Array(realm.objects(CardInfo.self))
-        var isExists: Bool = false
-        for card in cards {
-            if card.id == cardInfo!.id {
-                isExists = true
-                try! realm.write {
-                    if card.name != "Felica" {
-                        card.name = cardInfo!.name
-                    }
-                    card.balance = cardInfo!.balance
-                    card.transactions = cardInfo!.transactions
-                }
-            }
-        }
-        
-        if !isExists {
-            try! realm.write {
-                realm.add(cardInfo!)
-            }
-        }
-        
+
+        cardInfo = getWinnerCard()
+        cardView.backgroundColor = primaryColor
         cardName.text = cardInfo!.name
-        collectionView.dataSource = self
-        collectionView.delegate = self
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -71,6 +54,18 @@ class ScanResultViewController: UIViewController, UICollectionViewDelegate, UICo
         balance.text = "\(transaction.balance)円"
         
         return cell
+    }
+    
+    func getWinnerCard() -> CardInfo {
+        if (firstCard!.balance > secondCard!.balance) {
+            cardNumber.text = "１つ目のカード"
+            primaryColor = UIColor.init(hexString: "#F4C06D")
+            return firstCard!
+        } else {
+            cardNumber.text = "２つ目のカード"
+            primaryColor = UIColor.init(hexString: "#63C591")
+            return secondCard!
+        }
     }
     
     @IBAction func backButton() {

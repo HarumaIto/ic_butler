@@ -16,8 +16,10 @@ class BattleReadyViewController: UIViewController, UIGestureRecognizerDelegate, 
     @IBOutlet var startButton: UIButton!
     @IBOutlet var firstCardView: UIView!
     @IBOutlet var secondCardView: UIView!
+    @IBOutlet var firstLable: UILabel!
+    @IBOutlet var secondLable: UILabel!
     
-    var isFrstCardReading: Bool = false;
+    var isFarstCardReading: Bool = false;
     var firstCardInfo: CardInfo?
     var secondCardInfo: CardInfo?
     
@@ -40,17 +42,25 @@ class BattleReadyViewController: UIViewController, UIGestureRecognizerDelegate, 
         secondCardView.addGestureRecognizer(secondGesture)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toBattleResult" {
+            let next = segue.destination as? BattleResultViewController
+            next?.firstCard = self.firstCardInfo
+            next?.secondCard = self.secondCardInfo
+        }
+    }
+    
     @objc func firstCardTap(_ sender: UITapGestureRecognizer) {
         // タップ終了時
         if sender.state == .ended {
-            isFrstCardReading = true
+            isFarstCardReading = true
             self.reader.get(itemTypes: [.balance, .entryExitInformations, .transactions])
         }
     }
 
     @objc func secondCardTap(_ sender: UIGestureRecognizer) {
         if sender.state == .ended {
-            isFrstCardReading = false
+            isFarstCardReading = false
             self.reader.get(itemTypes: [.balance, .entryExitInformations, .transactions])
         }
     }
@@ -58,16 +68,20 @@ class BattleReadyViewController: UIViewController, UIGestureRecognizerDelegate, 
     func feliCaReaderSession(didRead feliCaCardData: TRETJapanNFCReader_FeliCa.FeliCaCardData, pollingErrors: [TRETJapanNFCReader_FeliCa.FeliCaSystemCode : Error?]?, readErrors: [TRETJapanNFCReader_FeliCa.FeliCaSystemCode : [TRETJapanNFCReader_FeliCa.FeliCaServiceCode : Error]]?) {
         let card = feliCaCardData as! TransitICCardData
         
-        if (isFirstResponder) {
-            firstCardInfo = CardInfo().fromCardData(cardData: card)
-        } else {
-            secondCardInfo = CardInfo().fromCardData(cardData: card)
-        }
-        
-        if (firstCardInfo != nil && secondCardInfo != nil) {
-            startButton.tintColor = UIColor(hexString: "#9165F5")
-            startButton.setTitle("Ready Fight", for: .normal)
-            startButton.setTitleColor(UIColor.white, for: .normal)
+        DispatchQueue.main.async {
+            if (self.isFarstCardReading) {
+                self.firstCardInfo = CardInfo().fromCardData(cardData: card)
+                self.firstLable.text = "１つ目のカードを追加しました！！"
+            } else {
+                self.secondCardInfo = CardInfo().fromCardData(cardData: card)
+                self.secondLable.text = "２つ目のカードを追加しました！！"
+            }
+            
+            if (self.firstCardInfo != nil && self.secondCardInfo != nil) {
+                self.startButton.backgroundColor = UIColor(hexString: "#9165F5")
+                self.startButton.setTitle("Ready Fight", for: .normal)
+                self.startButton.setTitleColor(UIColor.white, for: .normal)
+            }
         }
     }
     
@@ -77,7 +91,9 @@ class BattleReadyViewController: UIViewController, UIGestureRecognizerDelegate, 
             print("カードを登録してください")
             return
         }
-        
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: "toBattleResult", sender: nil)
+        }
     }
     
     // 読み取りエラー処理

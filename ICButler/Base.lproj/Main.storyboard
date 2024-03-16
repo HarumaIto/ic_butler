@@ -33,9 +33,11 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yxZ-J4-jXV">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yxZ-J4-jXV">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="4g1-5j-gvE"/>
+                                </constraints>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
                                     <navigationItem title="カード一覧" id="iE0-Y6-wlQ"/>
@@ -44,8 +46,14 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yxZ-J4-jXV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QWp-iS-GeY"/>
+                            <constraint firstItem="yxZ-J4-jXV" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="TEj-4q-UZE"/>
+                            <constraint firstItem="yxZ-J4-jXV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="dpQ-uw-SfC"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="一覧" image="folder" catalog="system" id="wBG-hU-biB"/>
+                    <navigationItem key="navigationItem" id="dBi-xh-Iy5"/>
                     <connections>
                         <outlet property="tableView" destination="jGh-tH-nJb" id="faS-JW-jyr"/>
                     </connections>
@@ -90,16 +98,15 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.38823529411764707" green="0.77254901960784317" blue="0.56862745098039214" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.56862745098039214" green="0.396078431372549" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="30"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BY9-5j-uE2">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BY9-5j-uE2">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
                                     <navigationItem title="スキャン" id="gRc-uZ-R7P"/>
@@ -108,6 +115,11 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PX7-3u-0OC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BY9-5j-uE2" firstAttribute="leading" secondItem="PX7-3u-0OC" secondAttribute="leading" id="2le-lA-Pl2"/>
+                            <constraint firstItem="BY9-5j-uE2" firstAttribute="trailing" secondItem="PX7-3u-0OC" secondAttribute="trailing" id="G7o-xb-9jq"/>
+                            <constraint firstItem="BY9-5j-uE2" firstAttribute="top" secondItem="PX7-3u-0OC" secondAttribute="top" id="TeB-Lz-8NK"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="スキャン" image="wave.3.forward.circle" catalog="system" id="JkX-DT-GYY"/>
                     <connections>
@@ -137,21 +149,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JRX-Cb-o2r">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JRX-Cb-o2r">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="eQm-AO-Nns"/>
+                                </constraints>
                                 <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
                                     <navigationItem title="カード情報" id="3sf-Ri-xPg">
                                         <barButtonItem key="leftBarButtonItem" title="戻る" id="Ruv-qJ-Z4F">
                                             <connections>
                                                 <action selector="backButton" destination="4eR-Bt-G6D" id="PzJ-0g-89Z"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="一覧へ" id="Ycb-ny-ICm">
-                                            <connections>
-                                                <action selector="pushCardsButton" destination="4eR-Bt-G6D" id="igm-4m-TtN"/>
-                                                <segue destination="1eh-hR-wuq" kind="modal" modalPresentationStyle="fullScreen" id="3co-5a-g3O"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -232,6 +240,11 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="iuX-xd-nH9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JRX-Cb-o2r" firstAttribute="top" secondItem="iuX-xd-nH9" secondAttribute="top" id="6AG-g7-fHH"/>
+                            <constraint firstItem="JRX-Cb-o2r" firstAttribute="trailing" secondItem="iuX-xd-nH9" secondAttribute="trailing" id="F56-EA-M0f"/>
+                            <constraint firstItem="JRX-Cb-o2r" firstAttribute="leading" secondItem="iuX-xd-nH9" secondAttribute="leading" id="LZZ-yE-hoa"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9E5-Lz-Qi5"/>
                     <connections>
@@ -251,9 +264,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Rv-K1-UPe">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Rv-K1-UPe">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="VlN-Rs-Dzu"/>
+                                </constraints>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
                                     <navigationItem title="バトル" id="xdd-Cj-oiF"/>
@@ -305,24 +320,187 @@
                                 <buttonConfiguration key="configuration" style="plain" title="VS">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="17"/>
                                 </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="onStartGame" destination="Da0-IS-J9b" eventType="touchUpInside" id="bBf-Pk-LIA"/>
+                                    <segue destination="hvj-Bh-kED" kind="presentation" identifier="toBattleResult" modalPresentationStyle="fullScreen" id="jDQ-8I-EGJ"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HHA-zf-xoL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3Rv-K1-UPe" firstAttribute="leading" secondItem="HHA-zf-xoL" secondAttribute="leading" id="2H6-Gx-kge"/>
+                            <constraint firstItem="3Rv-K1-UPe" firstAttribute="top" secondItem="HHA-zf-xoL" secondAttribute="top" id="hcd-4t-rnx"/>
+                            <constraint firstItem="3Rv-K1-UPe" firstAttribute="trailing" secondItem="HHA-zf-xoL" secondAttribute="trailing" id="kQf-gU-mDF"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="バトル" image="flag.and.flag.filled.crossed" catalog="system" id="aD7-hh-di3"/>
                     <connections>
                         <outlet property="firstCardView" destination="8Z3-po-H2V" id="QeS-4u-Pxb"/>
+                        <outlet property="firstLable" destination="ao8-OO-mCJ" id="nXu-jm-qxW"/>
                         <outlet property="secondCardView" destination="mMD-uL-9Qa" id="fw3-52-M9n"/>
+                        <outlet property="secondLable" destination="YZk-ET-Lu1" id="Y7f-7o-1LN"/>
                         <outlet property="startButton" destination="75b-gf-t5g" id="mRF-rA-icY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gCV-Bm-5JI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1020" y="-28.335832083958024"/>
+        </scene>
+        <!--Battle Result View Controller-->
+        <scene sceneID="Qpg-sD-H8L">
+            <objects>
+                <viewController id="hvj-Bh-kED" customClass="BattleResultViewController" customModule="ICButler" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vBM-Pv-nrG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WIN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zNr-Hr-O0X">
+                                <rect key="frame" x="47" y="80" width="281" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qmw-Pi-mcV">
+                                <rect key="frame" x="18" y="115" width="339" height="191"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="カード番号" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1aJ-TV-wOk">
+                                        <rect key="frame" x="8" y="86" width="326" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.56862745098039214" green="0.396078431372549" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="カード名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vws-MO-ZfV">
+                                <rect key="frame" x="18" y="323" width="281" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="10z-HY-Sy6">
+                                <rect key="frame" x="16" y="358" width="343" height="309"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xHI-gO-XRf">
+                                    <size key="itemSize" width="340" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TransactionCell" id="w8O-Zv-RIx">
+                                        <rect key="frame" x="1.5" y="0.0" width="340" height="84"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="kh9-GA-OaN">
+                                            <rect key="frame" x="0.0" y="0.0" width="340" height="84"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tram.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="C0U-IU-3Ia">
+                                                    <rect key="frame" x="15" y="19.5" width="44" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                                                    <color key="tintColor" red="0.95686274510000002" green="0.75294117650000003" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A地点" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SVw-5U-UnO">
+                                                    <rect key="frame" x="66" y="19" width="77" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="B地点" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ii2-0n-XLJ">
+                                                    <rect key="frame" x="200" y="19" width="74" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arrowshape.forward.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="eCF-YI-0nu">
+                                                    <rect key="frame" x="151" y="22" width="14" height="14"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                                                    <color key="tintColor" red="0.95686274510000002" green="0.75294117650000003" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2024-02-29" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iO5-ss-IJX">
+                                                    <rect key="frame" x="67" y="47" width="81" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0円" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j98-De-rga">
+                                                    <rect key="frame" x="266" y="30" width="66" height="22"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="340" height="84"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="hvj-Bh-kED" id="7bC-ZE-WCc"/>
+                                    <outlet property="delegate" destination="hvj-Bh-kED" id="SBj-oq-6Pu"/>
+                                </connections>
+                            </collectionView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vVo-j1-es2">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Xwv-5R-pwq"/>
+                                </constraints>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <navigationItem title="バトル" id="3Y7-VH-q4j">
+                                        <barButtonItem key="leftBarButtonItem" title="リプレイ" id="MXG-Ae-plQ">
+                                            <connections>
+                                                <action selector="backButton" destination="hvj-Bh-kED" id="hDU-Bg-2u5"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="sxv-K6-5rU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vVo-j1-es2" firstAttribute="top" secondItem="sxv-K6-5rU" secondAttribute="top" id="AvB-Lg-gXC"/>
+                            <constraint firstItem="vVo-j1-es2" firstAttribute="leading" secondItem="sxv-K6-5rU" secondAttribute="leading" id="ICz-Jt-hJr"/>
+                            <constraint firstItem="vVo-j1-es2" firstAttribute="trailing" secondItem="sxv-K6-5rU" secondAttribute="trailing" id="zL9-0l-JI7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="yzp-De-Y5a"/>
+                    <connections>
+                        <outlet property="cardName" destination="Vws-MO-ZfV" id="qdr-EF-G5M"/>
+                        <outlet property="cardNumber" destination="1aJ-TV-wOk" id="NLb-l9-Sa4"/>
+                        <outlet property="cardView" destination="qmw-Pi-mcV" id="t9n-2h-rVZ"/>
+                        <outlet property="collectionView" destination="10z-HY-Sy6" id="uvi-OO-AjK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a1R-Do-nFs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1757.5999999999999" y="-28.335832083958024"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="uik-8F-0nl">
@@ -351,7 +529,7 @@
         <image name="arrowshape.forward.fill" catalog="system" width="128" height="104"/>
         <image name="default_card" width="780" height="508"/>
         <image name="flag.and.flag.filled.crossed" catalog="system" width="128" height="80"/>
-        <image name="folder" catalog="system" width="32" height="32"/>
+        <image name="folder" catalog="system" width="128" height="96"/>
         <image name="tram.circle.fill" catalog="system" width="128" height="123"/>
         <image name="trophy" catalog="system" width="128" height="128"/>
         <image name="wave.3.forward.circle" catalog="system" width="128" height="123"/>

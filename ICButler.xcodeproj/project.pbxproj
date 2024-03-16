@@ -26,6 +26,7 @@
 		1D3EC0EC2B95B28A0060BD21 /* Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3EC0EB2B95B28A0060BD21 /* Award.swift */; };
 		1DB4D0282B9DEEAB002768AC /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB4D0272B9DEEAB002768AC /* UIColor.swift */; };
 		1DB4D02E2B9E073C002768AC /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DB4D02D2B9E073C002768AC /* icon.png */; };
+		1DD40A872BA5D21D00E57D1C /* BattleResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD40A862BA5D21D00E57D1C /* BattleResultViewController.swift */; };
 		1DD881F42BA1D5CE00969D7E /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD881F32BA1D5CE00969D7E /* Util.swift */; };
 		1DDE5EF02B975228001DFB64 /* CardListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDE5EEF2B975228001DFB64 /* CardListViewController.swift */; };
 		1DDE5EF32B97565B001DFB64 /* CardInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDE5EF12B97565B001DFB64 /* CardInfoTableViewCell.swift */; };
@@ -49,6 +50,7 @@
 		1D3EC0EB2B95B28A0060BD21 /* Award.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Award.swift; sourceTree = "<group>"; };
 		1DB4D0272B9DEEAB002768AC /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		1DB4D02D2B9E073C002768AC /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../../../../../../Users/harumaito/Downloads/icon.png; sourceTree = "<group>"; };
+		1DD40A862BA5D21D00E57D1C /* BattleResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleResultViewController.swift; sourceTree = "<group>"; };
 		1DD881F32BA1D5CE00969D7E /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		1DDE5EEF2B975228001DFB64 /* CardListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListViewController.swift; sourceTree = "<group>"; };
 		1DDE5EF12B97565B001DFB64 /* CardInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfoTableViewCell.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				1DE3D9CF2B9DE52400F38F34 /* BattleReadyViewController.swift */,
 				1DB4D0272B9DEEAB002768AC /* UIColor.swift */,
 				1DD881F32BA1D5CE00969D7E /* Util.swift */,
+				1DD40A862BA5D21D00E57D1C /* BattleResultViewController.swift */,
 			);
 			path = ICButler;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 				1DB4D0282B9DEEAB002768AC /* UIColor.swift in Sources */,
 				1D3EC0EC2B95B28A0060BD21 /* Award.swift in Sources */,
 				1D3EC0E62B95ADAB0060BD21 /* ScanResultViewController.swift in Sources */,
+				1DD40A872BA5D21D00E57D1C /* BattleResultViewController.swift in Sources */,
 				1D3EC0EA2B95B2480060BD21 /* Transaction.swift in Sources */,
 				1D3EC0C52B9575470060BD21 /* ScanViewController.swift in Sources */,
 				1DDE5EF02B975228001DFB64 /* CardListViewController.swift in Sources */,
@@ -369,6 +373,8 @@
 				DEVELOPMENT_TEAM = HHBLP8M79N;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ICButler/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ICButler;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.card-games";
 				INFOPLIST_KEY_NFCReaderUsageDescription = "カードをスキャンするために使用します。";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -399,6 +405,8 @@
 				DEVELOPMENT_TEAM = HHBLP8M79N;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ICButler/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ICButler;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.card-games";
 				INFOPLIST_KEY_NFCReaderUsageDescription = "カードをスキャンするために使用します。";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
