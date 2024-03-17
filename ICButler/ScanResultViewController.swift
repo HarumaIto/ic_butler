@@ -93,7 +93,6 @@ class ScanResultViewController: UIViewController, UICollectionViewDelegate, UICo
         entry.text = getStationNameForCode(transaction.entryCode)
         let exit = cell.contentView.viewWithTag(1) as! UILabel
         exit.text = getStationNameForCode(transaction.exitCode)
-        
         let date = cell.contentView.viewWithTag(4) as! UILabel
         date.text = transaction.date
         let balance = cell.contentView.viewWithTag(3) as! UILabel
