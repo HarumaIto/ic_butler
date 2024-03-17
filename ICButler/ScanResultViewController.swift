@@ -16,6 +16,8 @@ class ScanResultViewController: UIViewController, UICollectionViewDelegate, UICo
     let realm = try! Realm()
     var cardInfo: CardInfo?
     
+    var stationCodeLines = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,6 +45,19 @@ class ScanResultViewController: UIViewController, UICollectionViewDelegate, UICo
         cardName.text = cardInfo!.name
         collectionView.dataSource = self
         collectionView.delegate = self
+        
+        guard let path = Bundle.main.path(forResource: "StationCode", ofType: "csv") else {
+            print("Not found file")
+            return
+        }
+        
+        do {
+            let csvString = try String(contentsOfFile: path, encoding: String.Encoding.utf8)
+            stationCodeLines = csvString.components(separatedBy: .newlines)
+        } catch let error as NSError {
+            print("エラー\(error)")
+            return
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -56,15 +71,29 @@ class ScanResultViewController: UIViewController, UICollectionViewDelegate, UICo
 
         return returnSize
     }
+    
+    func getStationNameForCode(_ code: String) -> String {
+        let lineCode = code.prefix(2)
+        let stationCode = code.suffix(2)
+        
+        for line in stationCodeLines {
+            let componets = line.components(separatedBy: ",")
+            if (componets[0] == lineCode && componets[1] == stationCode) {
+                return componets[4]
+            }
+        }
+        return "その他"
+    }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "TransactionCell", for: indexPath)
         let transaction: Transaction = cardInfo!.transactions[indexPath.row]
         
         let entry = cell.contentView.viewWithTag(2) as! UILabel
-        entry.text = transaction.entryCode
+        entry.text = getStationNameForCode(transaction.entryCode)
         let exit = cell.contentView.viewWithTag(1) as! UILabel
-        exit.text = transaction.exitCode
+        exit.text = getStationNameForCode(transaction.exitCode)
+        
         let date = cell.contentView.viewWithTag(4) as! UILabel
         date.text = transaction.date
         let balance = cell.contentView.viewWithTag(3) as! UILabel

@@ -24,6 +24,7 @@
 		1D3EC0E82B95B16D0060BD21 /* CardInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3EC0E72B95B16D0060BD21 /* CardInfo.swift */; };
 		1D3EC0EA2B95B2480060BD21 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3EC0E92B95B2480060BD21 /* Transaction.swift */; };
 		1D3EC0EC2B95B28A0060BD21 /* Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3EC0EB2B95B28A0060BD21 /* Award.swift */; };
+		1D6668E32BA73CE7006EF14D /* StationCode.csv in Resources */ = {isa = PBXBuildFile; fileRef = 1D6668E22BA73CE7006EF14D /* StationCode.csv */; };
 		1DB4D0282B9DEEAB002768AC /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB4D0272B9DEEAB002768AC /* UIColor.swift */; };
 		1DB4D02E2B9E073C002768AC /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DB4D02D2B9E073C002768AC /* icon.png */; };
 		1DD40A872BA5D21D00E57D1C /* BattleResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD40A862BA5D21D00E57D1C /* BattleResultViewController.swift */; };
@@ -48,6 +49,7 @@
 		1D3EC0E72B95B16D0060BD21 /* CardInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfo.swift; sourceTree = "<group>"; };
 		1D3EC0E92B95B2480060BD21 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		1D3EC0EB2B95B28A0060BD21 /* Award.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Award.swift; sourceTree = "<group>"; };
+		1D6668E22BA73CE7006EF14D /* StationCode.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = StationCode.csv; sourceTree = "<group>"; };
 		1DB4D0272B9DEEAB002768AC /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		1DB4D02D2B9E073C002768AC /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../../../../../../Users/harumaito/Downloads/icon.png; sourceTree = "<group>"; };
 		1DD40A862BA5D21D00E57D1C /* BattleResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleResultViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				1D3EC0C62B9575470060BD21 /* Main.storyboard */,
 				1D3EC0C92B9575480060BD21 /* Assets.xcassets */,
 				1DB4D02D2B9E073C002768AC /* icon.png */,
+				1D6668E22BA73CE7006EF14D /* StationCode.csv */,
 				1D3EC0CB2B9575480060BD21 /* LaunchScreen.storyboard */,
 				1D3EC0CE2B9575480060BD21 /* Info.plist */,
 				1D3EC0E52B95ADAB0060BD21 /* ScanResultViewController.swift */,
@@ -191,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DDE5EF42B97565B001DFB64 /* CardInfoTableViewCell.xib in Resources */,
+				1D6668E32BA73CE7006EF14D /* StationCode.csv in Resources */,
 				1D3EC0CD2B9575480060BD21 /* LaunchScreen.storyboard in Resources */,
 				1DB4D02E2B9E073C002768AC /* icon.png in Resources */,
 				1D3EC0CA2B9575480060BD21 /* Assets.xcassets in Resources */,
@@ -369,7 +373,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ICButler/ICButler.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = HHBLP8M79N;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ICButler/Info.plist;
@@ -379,18 +383,24 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ito.ICButler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -401,7 +411,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ICButler/ICButler.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = HHBLP8M79N;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ICButler/Info.plist;
@@ -411,18 +421,24 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ito.ICButler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
